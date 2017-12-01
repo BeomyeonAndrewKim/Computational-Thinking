@@ -128,7 +128,7 @@ router.post('/update', (req, res, next) => {
     const arr = [writer, subject, content, num, pwd];
     conn.query(sql, arr, (err, result) => {
       if (err) { return next(err) }
-      console.log("result=", result);
+      console.log("result=", gi result);
       conn.release();
       if (result.affectedRows == 1) {
         res.redirect('/list'); //리스트로 이동
